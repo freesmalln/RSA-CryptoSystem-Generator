@@ -1,6 +1,5 @@
 import os
 
-
 def write(fPath, x):
     file = open(fPath, "a")
     file.write(x)

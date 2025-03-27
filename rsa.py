@@ -2,20 +2,21 @@
 # Encryption: c(m) = m^e mod n
 # Decryption: m(c) = c^d mod n
 
-import key_generation as kg
-import util as ut
-import file_operations as fo
-import encryption as en
-import decryption_driver as dd
+import encryption.key_generation as kg
+import utilities.util as ut
+import utilities.file_operations as fo
+import encryption.encryption as en
+import decryption.decryption_driver as dd
 
 e = 65537
 
 if __name__ == '__main__':
     m = input("Enter a message: ")
+    fPath = "utilities\\p_q.txt"
     ldict = ut.letterDict()
 
-    if (ut.checkForPrivateKey("p_q.txt")):
-        private_key = fo.readPrivateKey("p_q.txt")
+    if (ut.checkForPrivateKey(fPath)):
+        private_key = fo.readPrivateKey(fPath)
     else:
         private_key = kg.generatePrivateKey()
 

@@ -1,6 +1,5 @@
-from random import random
 import random as r
-import file_operations
+import utilities.file_operations as file_operations
 from Crypto.Util import number
 
 def gcd(p, q):
@@ -20,7 +19,7 @@ def genPrimesList(count):
 
     return primes
 
-fPath = "p_q.txt"
+fPath = "utilities\\p_q.txt"
 tempFile = open(fPath, "r")
 
 if (len(tempFile.readlines()) == 0):

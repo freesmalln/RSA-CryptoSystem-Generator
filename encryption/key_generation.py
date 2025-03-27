@@ -6,8 +6,8 @@
 # Compute the private key d such that d * e = 1 mod O/(n)
 # return kpub = (n, e), kp = d
 
-import util as ut
-import file_operations as fo
+import utilities.util as ut
+import utilities.file_operations as fo
 
 vlist = ut.generateNumbers()
 p = vlist[0]
@@ -30,7 +30,7 @@ def generatePrivateKey():
             e = 65537
 
     private_key = ut.mod_inverse(e, phiN)
-    fo.write("p_q.txt", "\n")
-    fo.write("p_q.txt", str(private_key))
+    fo.write("utilities\\p_q.txt", "\n")
+    fo.write("utilities\\p_q.txt", str(private_key))
 
     return private_key
