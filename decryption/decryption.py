@@ -2,6 +2,7 @@
 # Decryption: m(c) = c^d mod n
 
 def decryp(c, d, n):
+    print(f'Encrypted text {c}')
     dMessage = []
     dMessageS = ""
 
